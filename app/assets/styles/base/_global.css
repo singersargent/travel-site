@@ -11,3 +11,12 @@ img {
 * {
    box-sizing: border-box;
 }
+
+a {
+   color: $mainOrange;
+
+   &:hover {
+      color: $mainOrangeHover;
+      text-decoration: underline;
+   }
+}
