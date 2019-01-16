@@ -11,19 +11,23 @@
       font-weight: 500;
    }
 
+   &--blue {
+      color: $mainBlue;
+   }
+
    &__icon {
-      margin-right: .5rem;
-      left: 0rem;
-      top: .5rem;
-   }
-   &::before {
-      background: url(../../assets/images/icons/star.svg) no-repeat;
-      content: "";
-      height: 70px;
-      width: 70px;
-      position: relative;
-      display: inline-block;
-      margin: 0 10px 0 0;
-      top: 13px;
-   }
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: .6rem;
+
+      @mixin atSmall {
+         position: relative;
+         top: 8px;
+         display: inline-block;
+         margin-right: 1.5rem;
+         margin-left: 0;
+         margin-bottom: 0;
+      }
+   } 
 }
