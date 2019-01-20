@@ -8,11 +8,43 @@
    right: 0;
    top: 0;
    z-index: 5;
+   opacity: 0;
+   visibility: hidden;
+   transform: scale(1.2);
+   transition: all .3s ease-out;
+
+   &--is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+   }
+
+   &__inner {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+   }
 
    &__description {
       font-size: 1.3rem;
       font-weight: 300;
       line-height: 1.65;
       text-align: center;
+   }
+
+   &__close {
+      color: $mainBlue;
+      font-size: 2rem;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      transform-origin: 100% 0;
+      transform: scaleX(1.2);
+
+      &:hover {
+         color: orange;
+         cursor: pointer;
+      }
    }
 }

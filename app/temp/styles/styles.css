@@ -684,6 +684,7 @@ a:hover {
       color: #2f5572;
    }
 .section-title--less-margin {
+      margin-top: 0;
       margin-bottom: 1.3rem;
    }
 .section-title__icon {
@@ -1147,13 +1148,47 @@ a:hover {
    right: 0;
    top: 0;
    z-index: 5;
+   opacity: 0;
+   visibility: hidden;
+   -webkit-transform: scale(1.2);
+           transform: scale(1.2);
+   -webkit-transition: all .3s ease-out;
+   transition: all .3s ease-out;
 }
+.modal--is-visible {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+   }
+.modal__inner {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+   }
 .modal__description {
       font-size: 1.3rem;
       font-weight: 300;
       line-height: 1.65;
       text-align: center;
    }
+.modal__close {
+      color: #2f5572;
+      font-size: 2rem;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      -webkit-transform-origin: 100% 0;
+              transform-origin: 100% 0;
+      -webkit-transform: scaleX(1.2);
+              transform: scaleX(1.2);
+   }
+.modal__close:hover {
+         color: orange;
+         cursor: pointer;
+      }
 /* _social-icons.css */
 .social-icons {
    text-align: center;
